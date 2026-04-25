@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Gonzo Signs Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, photorealistic educational web application designed to teach students how to recognize dozens of United States street signs and understand expected driving behaviors. 
 
-Currently, two official plugins are available:
+**🚀 [Play the Live Simulator Here!](https://JoeFerrara.github.io/gonzo-signs)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Comprehensive Database:** Covers over two dozen US street signs spanning Regulatory, Warning, and Guide categories (Stop, Yield, Speed Limits, Crosswalks, etc).
+- **Photorealistic Engine:** Powered by a highly-detailed HTML5 Canvas simulator featuring realistic sprites (asphalt, terrain, sports cars, SUVs, police cruisers, and pedestrians).
+- **Interactive Scenarios:**
+  - Learn what happens when you safely follow a sign's rules.
+  - Watch the dramatic consequences of ignoring signs: T-Bone collisions at Yield signs, accidents at Crosswalks, and high-speed Police Intervention with flashing lights.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to Run Locally
 
-## Expanding the ESLint configuration
+If you'd like to run the code on your own machine instead of using the live link:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/JoeFerrara/gonzo-signs.git
+   cd gonzo-signs
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Install dependencies:**
+   Make sure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. **Open your browser:**
+   Navigate to the local URL provided in your terminal (typically `http://localhost:5173`).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Built With
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React 19
+- TypeScript
+- Vite
+- HTML5 Canvas Engine
